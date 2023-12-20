@@ -1,0 +1,11 @@
+# VitePress
+.vitepress/cache
+.vitepress/dist
+
+# Node.js
+node_modules
+pnpm-lock.yaml
+
+# WebStorm
+.idea
+*.iml
