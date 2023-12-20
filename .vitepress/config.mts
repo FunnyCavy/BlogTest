@@ -77,5 +77,22 @@ export default defineConfig({
       host: '0.0.0.0',
       port: 80
     }
+  },
+
+  transformHead({ assets }) {
+    return assets
+      .filter(asset => /\.woff2$/.test(asset))
+      .map(fontFile => (
+        [
+          'link',
+          {
+            rel: 'preload',
+            href: fontFile,
+            as: 'font',
+            type: 'font/woff2',
+            crossorigin: ''
+          }
+        ]
+      ))
   }
 })
