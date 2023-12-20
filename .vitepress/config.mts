@@ -89,8 +89,7 @@ export default defineConfig({
             rel: 'preload',
             href: fontFile,
             as: 'font',
-            type: 'font/woff2',
-            crossorigin: ''
+            type: 'font/woff2'
           }
         ]
       ))
