@@ -2,7 +2,7 @@ import * as fs from 'node:fs'
 import * as path from 'node:path'
 import { DefaultTheme } from 'vitepress'
 
-interface DirectoryResult {
+interface SidebarInfo {
   sidebarItems: DefaultTheme.SidebarItem[];
   folderLink: string | null;
 }
@@ -19,7 +19,7 @@ function generateLink(filePath: string, basePath: string): string {
 /**
  * 递归遍历目录生成侧边栏项
  */
-function walkDirectory(directory: string, basePath: string): DirectoryResult {
+function generateSidebarItems(directory: string, basePath: string): SidebarInfo {
   // 侧边栏项
   const sidebarItems: DefaultTheme.SidebarItem[] = []
   // 该目录是否可点击
@@ -32,7 +32,7 @@ function walkDirectory(directory: string, basePath: string): DirectoryResult {
     const fullPath = path.join(directory, dirent.name)
     if (dirent.isDirectory()) {
       // 如果是目录则递归调用
-      const directoryItems = walkDirectory(fullPath, basePath)
+      const directoryItems = generateSidebarItems(fullPath, basePath)
       if (directoryItems.sidebarItems.length > 0) {
         sidebarItems.push({
           text: dirent.name,
@@ -57,5 +57,5 @@ function walkDirectory(directory: string, basePath: string): DirectoryResult {
  */
 export function generateSidebar(directory: string): DefaultTheme.SidebarItem[] {
   let basePath = path.dirname(directory)
-  return walkDirectory(directory, basePath).sidebarItems
+  return generateSidebarItems(directory, basePath).sidebarItems
 }
