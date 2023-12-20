@@ -1,28 +1,76 @@
 import { defineConfig } from 'vitepress'
 
-// https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Moji",
-  description: "A VitePress Site",
+  // 站点配置
+  title: '莫记',
+  description: '莫记 - 淡笑莫言的随记小站',
+  head: [ [ 'link', { rel: 'icon', href: '/favicon.svg' } ] ],
+  lang: 'zh-cn',
+  srcDir: 'src',
+
+  // 主题配置
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
-    nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
-    ],
+    logo: '/favicon.svg',
 
-    sidebar: [
-      {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
+    // 搜索
+    search: {
+      provider: 'local',
+      options: {
+        locales: {
+          root: {
+            translations: {
+              button: {
+                buttonText: '在莫记中搜索'
+              },
+              modal: {
+                displayDetails: '显示详细列表',
+                resetButtonTitle: '清除查询条件',
+                noResultsText: '未找到相关结果',
+                footer: {
+                  navigateText: '切换',
+                  selectText: '选择',
+                  closeText: '关闭'
+                }
+              }
+            }
+          }
+        }
       }
+    },
+
+    // 导航栏
+    nav: [
+      { text: '主页', link: '/' },
+      { text: '博客', link: '/blog/' },
+      { text: '笔记', link: '/note/' },
+      { text: '杂谈', link: '/other/' }
+    ],
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/DanXiaoMoYan' }
     ],
 
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
+    // 侧边栏
+    sidebar: [],
+
+    // 本地化
+    sidebarMenuLabel: '菜单',
+    darkModeSwitchLabel: '外观',
+    outline: {
+      label: '章节速览'
+    },
+    lastUpdated: {
+      text: '最后编辑'
+    },
+    docFooter: {
+      prev: '上一篇',
+      next: '下一篇'
+    }
+  },
+
+  vite: {
+    server: {
+      host: '0.0.0.0',
+      port: 80
+    }
   }
 })
