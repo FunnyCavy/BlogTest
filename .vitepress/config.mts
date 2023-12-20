@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress'
-import { generateSidebar } from './util/genSidebar'
+import { generateSidebar } from './util/genSidebar.mjs'
 
 export default defineConfig({
   // 站点配置
