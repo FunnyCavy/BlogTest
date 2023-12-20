@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'HarmonyOS Sans SC';
+    src: url('./font/HarmonyOS_Sans_SC_Regular.woff2') format('woff2');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'HarmonyOS Sans SC';
+    src: url('./font/HarmonyOS_Sans_SC_Medium.woff2') format('woff2');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'HarmonyOS Sans SC';
+    src: url('./font/HarmonyOS_Sans_SC_Bold.woff2') format('woff2');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('./font/JetBrainsMono_Regular.woff2') format('woff2');
+    font-weight: 400;
+}
+
+:root {
+    /* 字体 */
+    --vp-font-family-base: "HarmonyOS Sans SC";
+    --vp-font-family-mono: "JetBrains Mono", "HarmonyOS Sans SC";
+
+    /* 标题样式 */
+    --vp-home-hero-name-color: transparent;
+    --vp-home-hero-name-background: -webkit-linear-gradient(20deg, #bd34fe, #41d1ff);
+}
