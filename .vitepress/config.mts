@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { generateSidebar } from './util/genSidebar'
 
 export default defineConfig({
   // 站点配置
@@ -50,7 +51,11 @@ export default defineConfig({
     ],
 
     // 侧边栏
-    sidebar: [],
+    sidebar: {
+      '/blog/': generateSidebar('src/blog'),
+      '/note/': generateSidebar('src/note'),
+      '/other/': generateSidebar('src/other')
+    },
 
     // 本地化
     sidebarMenuLabel: '菜单',
