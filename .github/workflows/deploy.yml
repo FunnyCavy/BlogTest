@@ -1,24 +1,24 @@
 name: Deploy VitePress site to Pages
 
+# 推送到 main 分支或手动触发时执行
 on:
   push:
     branches: [ main ]
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+# 设置 GITHUB_TOKEN 的权限以允许部署到 GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+# 只允许一个并发部署, 并跳过多余的部署任务
 concurrency:
   group: pages
   cancel-in-progress: false
 
 jobs:
-  # Build job
+  # 构建任务
   build:
     runs-on: ubuntu-latest
     steps:
@@ -45,7 +45,7 @@ jobs:
         with:
           path: .vitepress/dist
 
-  # Deployment job
+  # 部署任务
   deploy:
     environment:
       name: github-pages
