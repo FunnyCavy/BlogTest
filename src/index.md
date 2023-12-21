@@ -1,25 +1,32 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
 hero:
-  name: "Moji"
-  text: "A VitePress Site"
-  tagline: My great project tagline
+  name: "莫记 - MOJI"
+  text: "基于 VitePress 构建"
+  tagline: "淡笑莫言的速记小站"
+  image:
+    src: /favicon.svg
+    alt: 莫记
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: 博客
+      link: /blog/
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: 笔记
+      link: /note/
+    - theme: alt
+      text: 杂谈
+      link: /other/
 
 features:
-  - title: Feature A
+  - icon: 😊
+    title: 墨迹
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
+  - icon: ✨
+    title: 默记
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
+  - icon: 😎
+    title: 莫急
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
-
