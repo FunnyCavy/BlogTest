@@ -27,6 +27,7 @@ export default DefaultTheme
 ```
 
 ```css
+/* .vitepress/theme/custom.css */
 @font-face {
     font-family: 'HarmonyOS Sans SC';
     src: url('fonts/HarmonyOS_Sans_SC_Regular.woff2') format('woff2');
@@ -63,14 +64,13 @@ export default DefaultTheme
 为什么字体的 CSS 配置会是上面这样呢？
 
 - 如果仅仅更改 `--vp-font-family-base`，自己的设备由于安装了这些字体，确实能正确替换，但是别人打开网站就会回滚到默认字体
-- 使用 `@font-face` 引用本地文件，然后将其打包到资源路径下，才能在任何地方都显示这些字体
+- 使用 `@font-face` 引用字体文件，构建时将这些字体打包到资源路径下，才能在任何地方都显示这些字体
 - 查看 CSS 后，发现引用到的 `font-weight` 只有 400、500、600、700 这几个值，于是提供了 HarmonyOS Sans SC 的三种字重
 
-> 由于 HarmonyOS Sans SC 提供的字符数量太多，导致字体文件过大，仅一个字重的 `.ttf` 字体文件就占到了 8 MB
+> 由于 HarmonyOS Sans SC 提供的字符数量太多，导致字体文件过大，仅一个字重的 `.ttf` 字体文件就占到了 8 MB，网站为了显示几 KB
+> 的文本内容就需要加载 24 MB 的字体文件，显然不太合适
 >
-> 网站为了显示几 KB 的文本内容就需要加载 24 MB 的字体文件，显然不太合适，于是对这几个字体文件进行了压缩，需要的伙伴可以去仓库自取
->
-> 下面是简略的压缩流程：
+> 于是对这几个字体文件进行了压缩，需要的伙伴可以去仓库自取，下面是简略的压缩流程：
 >
 > - 提取出基本拉丁字符、中文标点符号、通用规范汉字表常用字集 3500 字的 Unicode 编码（压缩后仅 96+29+3500=3625 个字符，却能完全满足需求）
 > - 安装 Python 的 `fonttools` 库，执行 `pyftsubset xxx.ttf --unicodes-file=unicode.txt` 使用提供的 Unicode 编码压缩指定字体
@@ -78,7 +78,7 @@ export default DefaultTheme
 >
 > 附：常用字集 3500 字一览，给你一点小小的方块字震撼
 >
-> ![PixPin_2023-12-21_13-11-05](./img/VitePress 建站/PixPin_2023-12-21_13-11-05.png)
+> ![PixPin_2023-12-21_13-11-05](img/VitePress建站/PixPin_2023-12-21_13-11-05.png)
 
 ### 易用性优化
 
@@ -160,17 +160,17 @@ jobs:
 
 然后将仓库 Pages 设置中的部署构建源修改为 `Github Actions`
 
-![image-20231221122502858](./img/VitePress 建站/image-20231221122502858.png)
+![image-20231221122502858](img/VitePress建站/image-20231221122502858.png)
 
 ### 自定义域名
 
 然后继续设置自定义域名，将原本 `username.github.io` 的域名修改为自己的域名
 
-![image-20231221122924455](./img/VitePress 建站/image-20231221122924455.png)
+![image-20231221122924455](img/VitePress建站/image-20231221122924455.png)
 
 修改自己域名的 DNS 解析，添加 `CNAME` 记录，值为原 GitHub Pages 域名 `username.github.io`
 
-![image-20231221123238053](./img/VitePress 建站/image-20231221123238053.png)
+![image-20231221123238053](img/VitePress建站/image-20231221123238053.png)
 
 配置完成后，等待几分钟，GitHub Pages 验证自定义域名的 DNS 即可成功，并该域名提供 HTTPS 安全证书
 
