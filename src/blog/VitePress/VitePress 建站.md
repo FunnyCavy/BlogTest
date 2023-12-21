@@ -1,13 +1,73 @@
 # VitePress 建站记录
 
-平时浏览网页时，发现很多网站都是基于 VitePress 搭建的，正好目前 VitePress 也即将发布 1.0
-正式版，基本不会再有大的变动，于是决定选用 VitePress 整个博客玩玩。这里记录着建站过程中的一些配置和优化过程。
+平时浏览网页时，发现很多网站都是基于 [VitePress](https://vitepress.dev/) 搭建的，正好目前 VitePress 也即将发布 1.0
+正式版，基本不会再有大的变动，于是决定选用 VitePress 整个博客玩玩。
+
+这里记录着建站过程中的一些配置和优化过程。
 
 ## VitePress 配置优化
 
 ### 界面优化
 
-VitePress 内的各个元素默认英文显示
+VitePress 内的各个元素默认英文显示，首先先进行一些本地化设置
+
+::: code-group
+
+```ts{4-16} [页面元素配置]
+// .vitepress/config.mts
+export default defineConfig({
+  themeConfig: {
+    outline: {
+      label: '章节速览'
+    },
+    lastUpdated: {
+      text: '最后编辑'
+    },
+    docFooter: {
+      prev: '上一篇',
+      next: '下一篇'
+    },
+    darkModeSwitchLabel: '外观',
+    sidebarMenuLabel: '菜单',
+    returnToTopLabel: '返回顶部'
+  }
+})
+```
+
+```ts{10-24} [搜索弹窗配置]
+// .vitepress/config.mts
+export default defineConfig({
+  themeConfig: {
+    // 搜索
+    search: {
+      provider: 'local',
+      options: {
+        locales: {
+          root: {
+            translations: {
+              button: {
+                buttonText: '在莫记中搜索'
+              },
+              modal: {
+                displayDetails: '显示详细列表',
+                resetButtonTitle: '清除查询条件',
+                noResultsText: '未找到相关结果',
+                footer: {
+                  navigateText: '切换',
+                  selectText: '选择',
+                  closeText: '关闭'
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+})
+```
+
+:::
 
 ### 字体优化
 
@@ -64,17 +124,44 @@ export default DefaultTheme
 - 使用 `@font-face` 引用字体文件，构建时将这些字体打包到资源路径下，才能在任何地方都显示这些字体
 - 查看 CSS 后，发现引用到的 `font-weight` 只有 400、500、600、700 这几个值，于是提供了 HarmonyOS Sans SC 的三种字重
 
-> 由于 HarmonyOS Sans SC 提供的字符数量太多，导致字体文件过大，仅一个字重的 `.ttf` 字体文件就占到了 8 MB，网站为了显示几 KB
-> 的文本内容就需要加载 24 MB 的字体文件，显然不太合适。于是对这几个字体文件进行了压缩，需要的伙伴可以去仓库自取，下面是简略的压缩流程：
->
-> - 提取出基本拉丁字符、中文标点符号、通用规范汉字表常用字集 3500 字的 Unicode 编码（压缩后仅 96+29+3500=3625 个字符，却能完全满足需求）
-> - 安装 Python 的 `fonttools` 库，执行 `pyftsubset xxx.ttf --unicodes-file=unicode.txt` 命令，作用是使用指定文件内的
-    Unicode 编码压缩指定的字体
-> - 将 `.ttf` 格式的字体转换为 `.woff2` 格式，woff2 格式实现了更高的压缩率和更好的性能，是目前最适合应用在网站上的字体格式
->
+```ts
+// .vitepress/config.mts
+export default defineConfig({
+  transformHead({ assets }) {
+    return assets
+      .filter(asset => /\.woff2$/.test(asset))
+      .map(fontFile => (
+        [
+          'link',
+          {
+            rel: 'preload',
+            href: fontFile,
+            as: 'font',
+            type: 'font/woff2'
+          }
+        ]
+      ))
+  }
+})
+```
+
+::: details 关于字体的题外话
+
+由于 HarmonyOS Sans SC 提供的字符数量太多，导致字体文件过大，仅一个字重的 `.ttf` 字体文件就占到了 8 MB，网站为了显示几 KB
+的文本内容就需要加载 24 MB 的字体文件，显然不太合适。于是对这几个字体文件进行了压缩，需要的伙伴可以去仓库自取。
+
+**下面是简略的压缩流程：**
+
+1. 提取出基本拉丁字符、中文标点符号、通用规范汉字表常用字集 3500 字的 Unicode 编码（压缩后仅 96+29+3500=3625 个字符，却能完全满足需求）
+2. 安装 Python 的 `fonttools` 库，执行 `pyftsubset xxx.ttf --unicodes-file=unicode.txt` 命令，作用是使用指定文件内的
+   Unicode 编码压缩指定的字体
+3. 将 `.ttf` 格式的字体转换为 `.woff2` 格式，woff2 格式实现了更高的压缩率和更好的性能，是目前最适合应用在网站上的字体格式
+
 > 附：常用字集 3500 字一览，给你一点小小的方块字震撼
 >
 > ![PixPin_2023-12-21_13-11-05](img/VitePress建站/PixPin_2023-12-21_13-11-05.png)
+
+:::
 
 ### 易用性优化
 
