@@ -63,7 +63,10 @@ export default defineConfig({
       label: '章节速览'
     },
     lastUpdated: {
-      text: '最后编辑'
+      text: '最后编辑',
+      formatOptions: {
+        timeStyle: undefined
+      }
     },
     docFooter: {
       prev: '上一篇',
