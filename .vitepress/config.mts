@@ -58,8 +58,6 @@ export default defineConfig({
     },
 
     // 本地化
-    sidebarMenuLabel: '菜单',
-    darkModeSwitchLabel: '外观',
     outline: {
       label: '章节速览'
     },
@@ -69,7 +67,10 @@ export default defineConfig({
     docFooter: {
       prev: '上一篇',
       next: '下一篇'
-    }
+    },
+    darkModeSwitchLabel: '外观',
+    sidebarMenuLabel: '菜单',
+    returnToTopLabel: '返回顶部'
   },
 
   vite: {
