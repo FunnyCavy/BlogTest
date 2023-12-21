@@ -31,3 +31,15 @@
     --vp-home-hero-name-color: transparent;
     --vp-home-hero-name-background: -webkit-linear-gradient(20deg, #bd34fe, #41d1ff);
 }
+
+/* 图像 */
+.VPDoc img {
+    border-radius: 4px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.VPDoc img:hover {
+    box-shadow: 0 5px 25px -10px rgba(0, 0, 0, 0.5);
+    transform: scale(1.01);
+}
