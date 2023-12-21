@@ -124,7 +124,7 @@ export default DefaultTheme
 - 使用 `@font-face` 引用字体文件，构建时将这些字体打包到资源路径下，才能在任何地方都显示这些字体
 - 查看 CSS 后，发现引用到的 `font-weight` 只有 400、500、600、700 这几个值，于是提供了 HarmonyOS Sans SC 的三种字重
 
-然后可以通过 `transformHead` 钩子函数在构建的时候为每个页面生成字体预加载的 `<link>` 标签，通过正则匹配所有 woff2
+可以通过 `transformHead` 钩子函数在构建的时候为每个页面生成字体预加载的 `<link>` 标签，通过正则匹配所有 woff2
 格式的字体，然后生成对应的标签：
 
 ```ts
