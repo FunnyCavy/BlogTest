@@ -259,5 +259,3 @@ jobs:
 ![image-20231221123238053](img/VitePress建站/image-20231221123238053.png)
 
 配置完成后，等待几分钟，GitHub Pages 验证自定义域名的 DNS 即可成功，并该域名提供 HTTPS 安全证书
-
-## 写作体验优化
