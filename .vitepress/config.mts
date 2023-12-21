@@ -13,6 +13,24 @@ export default defineConfig({
   themeConfig: {
     logo: '/favicon.svg',
 
+    // 导航栏
+    nav: [
+      { text: '主页', link: '/' },
+      { text: '博客', link: '/blog/' },
+      { text: '笔记', link: '/note/' },
+      { text: '杂谈', link: '/other/' }
+    ],
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/DanXiaoMoYan' }
+    ],
+
+    // 侧边栏
+    sidebar: {
+      '/blog/': generateSidebar('src/blog'),
+      '/note/': generateSidebar('src/note'),
+      '/other/': generateSidebar('src/other')
+    },
+
     // 搜索
     search: {
       provider: 'local',
@@ -39,26 +57,9 @@ export default defineConfig({
       }
     },
 
-    // 导航栏
-    nav: [
-      { text: '主页', link: '/' },
-      { text: '博客', link: '/blog/' },
-      { text: '笔记', link: '/note/' },
-      { text: '杂谈', link: '/other/' }
-    ],
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/DanXiaoMoYan' }
-    ],
-
-    // 侧边栏
-    sidebar: {
-      '/blog/': generateSidebar('src/blog'),
-      '/note/': generateSidebar('src/note'),
-      '/other/': generateSidebar('src/other')
-    },
-
     // 本地化
     outline: {
+      level: [ 2, 3 ],
       label: '章节速览'
     },
     lastUpdated: {
@@ -81,6 +82,7 @@ export default defineConfig({
   },
 
   transformHead({ assets }) {
+    // 配置字体预加载
     return assets
       .filter(asset => /\.woff2$/.test(asset))
       .map(fontFile => (

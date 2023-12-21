@@ -13,7 +13,7 @@ VitePress 内的各个元素默认英文显示，首先先进行一些本地化�
 
 ::: code-group
 
-```ts{4-16} [页面元素配置]
+```ts [页面元素配置]
 // .vitepress/config.mts
 export default defineConfig({
   themeConfig: {
@@ -124,6 +124,9 @@ export default DefaultTheme
 - 使用 `@font-face` 引用字体文件，构建时将这些字体打包到资源路径下，才能在任何地方都显示这些字体
 - 查看 CSS 后，发现引用到的 `font-weight` 只有 400、500、600、700 这几个值，于是提供了 HarmonyOS Sans SC 的三种字重
 
+然后可以通过 `transformHead` 钩子函数在构建的时候为每个页面生成字体预加载的 `<link>` 标签，通过正则匹配所有 woff2
+格式的字体，然后生成对应的标签：
+
 ```ts
 // .vitepress/config.mts
 export default defineConfig({
@@ -155,7 +158,7 @@ export default defineConfig({
 1. 提取出基本拉丁字符、中文标点符号、通用规范汉字表常用字集 3500 字的 Unicode 编码（压缩后仅 96+29+3500=3625 个字符，却能完全满足需求）
 2. 安装 Python 的 `fonttools` 库，执行 `pyftsubset xxx.ttf --unicodes-file=unicode.txt` 命令，作用是使用指定文件内的
    Unicode 编码压缩指定的字体
-3. 将 `.ttf` 格式的字体转换为 `.woff2` 格式，woff2 格式实现了更高的压缩率和更好的性能，是目前最适合应用在网站上的字体格式
+3. 将 `.ttf` 格式的字体转换为 `.woff2` 格式（woff2 格式实现了更高的压缩率和更好的性能，是目前最适合应用在网站上的字体格式）
 
 > 附：常用字集 3500 字一览，给你一点小小的方块字震撼
 >
@@ -169,11 +172,11 @@ export default defineConfig({
 
 ## 网站部署
 
-### GitHub Pages
-
 既然做博客，就要专注内容，不能被杂七杂八的事情分散精力，所以选择了 GitHub Pages
 
-VitePress 文档中也贴心的附上了 GitHub Actions 工作流的配置，翻译了部分注释，然后将包管理器更换为了 pnpm，最终配置如下：
+### GitHub Pages
+
+VitePress 文档中也贴心的附上了 GitHub Actions 工作流的配置，翻译了部分注释，然后将包管理器更换为 pnpm 后，最终配置如下：
 
 ```yml
 # .github/workflows/deploy.yml
