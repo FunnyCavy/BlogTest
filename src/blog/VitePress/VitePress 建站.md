@@ -34,7 +34,7 @@ export default defineConfig({
 })
 ```
 
-```ts{10-24} [搜索弹窗配置]
+```ts [搜索弹窗配置]
 // .vitepress/config.mts
 export default defineConfig({
   themeConfig: {
@@ -44,7 +44,7 @@ export default defineConfig({
       options: {
         locales: {
           root: {
-            translations: {
+            translations: { // [!code focus:15]
               button: {
                 buttonText: '在莫记中搜索'
               },
@@ -244,7 +244,7 @@ jobs:
         uses: actions/deploy-pages@v2
 ```
 
-然后将仓库 Pages 设置中的部署构建源修改为 `Github Actions`
+然后将仓库 Pages 设置中的部署构建源修改为 `GitHub Actions`
 
 ![image-20231221122502858](img/VitePress建站/image-20231221122502858.png)
 

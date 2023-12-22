@@ -15,7 +15,7 @@ hero:
     - theme: alt
       text: 笔记
       link: /note/
-    - theme: alt
+    - theme: sponsor
       text: 杂谈
       link: /other/
 
