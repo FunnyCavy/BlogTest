@@ -39,19 +39,20 @@
 /* 图像 */
 .main img:hover {
     transform: scale(1.01);
-    box-shadow: 0 5px 30px -10px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--vp-shadow-3);
 }
 
 .medium-zoom-image {
     border-radius: 8px;
-    transition: transform .3s cubic-bezier(.2, 0, .2, 1), box-shadow .3s cubic-bezier(.2, 0, .2, 1) !important;
-    z-index: 30;
-    cursor: pointer;
+    box-shadow: var(--vp-shadow-2);
     background-color: var(--vp-c-bg);
+    transition: transform .3s, box-shadow .3s !important;
+    cursor: pointer;
+    z-index: 31;
 }
 
 .medium-zoom-overlay {
-    z-index: 30;
+    backdrop-filter: blur(3px);
     cursor: pointer !important;
-    backdrop-filter: blur(1px);
+    z-index: 30;
 }
