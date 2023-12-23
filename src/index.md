@@ -13,10 +13,10 @@ hero:
       text: ⭐ 博客
       link: /blog/
     - theme: alt
-      text: 📚 笔记
+      text: 📖 笔记
       link: /note/
     - theme: sponsor
-      text: 杂谈
+      text: 🍊 杂谈
       link: /other/
 
 features:
