@@ -48,7 +48,7 @@
     background-color: var(--vp-c-bg);
     transition: transform .3s, box-shadow .3s !important;
     cursor: pointer;
-    z-index: 31;
+    z-index: 30;
 }
 
 .medium-zoom-overlay {
