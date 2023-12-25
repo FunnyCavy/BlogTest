@@ -24,8 +24,8 @@
 
 :root {
     /* 字体 */
-    --vp-font-family-base: "HarmonyOS Sans SC";
-    --vp-font-family-mono: "JetBrains Mono", "HarmonyOS Sans SC";
+    --vp-font-family-base: 'HarmonyOS Sans SC';
+    --vp-font-family-mono: 'JetBrains Mono', 'HarmonyOS Sans SC';
 
     /* 首页标题样式 */
     --vp-home-hero-name-color: transparent;
