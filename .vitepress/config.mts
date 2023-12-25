@@ -5,7 +5,7 @@ export default defineConfig({
   // 站点配置
   title: '莫记',
   description: '莫记 - 淡笑莫言的随记小站',
-  head: [ [ 'link', { rel: 'icon', href: '/favicon.svg' } ] ],
+  head: [ [ 'link', { rel: 'icon', href: '/logo.svg' } ] ],
   lang: 'zh-cn',
   srcDir: 'src',
 
