@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+    <defs>
+        <linearGradient id="a" x1=".72" x2=".36" y1=".35" y2=".61" gradientUnits="objectBoundingBox" spreadMethod="pad">
+            <stop offset="0" stop-color="#6ae7af"/>
+            <stop offset="1" stop-color="#98ebc5"/>
+        </linearGradient>
+        <linearGradient id="c" x1=".7" x2=".23" y1=".26" y2=".94" gradientUnits="objectBoundingBox" spreadMethod="pad">
+            <stop offset="0" stop-color="#3e83ee"/>
+            <stop offset="1" stop-color="#5986f0"/>
+        </linearGradient>
+        <linearGradient id="d" x1=".81" x2="0" y1=".36" y2=".74" gradientUnits="objectBoundingBox" spreadMethod="pad">
+            <stop offset="0" stop-color="#459fff"/>
+            <stop offset="1" stop-color="#c2ddff"/>
+        </linearGradient>
+        <filter id="b" width="1.01" height="1.02" x="-.01" y="-.01">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="1 1"/>
+        </filter>
+    </defs>
+    <path fill="#6fe6b1" d="M510.25 899 179 690.64V542.09l331.25 208.1Z"/>
+    <path fill="#4dd197" d="m510.25 899 331.26-208.36V542.09l-331.26 208.1Z"/>
+    <path fill="url(#a)" d="m841.51 542.09-331.26 208.1L179 542.09l331.25-177.65Z"/>
+    <path fill="#5f6fa5" fill-opacity=".15" fill-rule="evenodd" d="M274.14 488.34 515.12 647.1 844 466.12 559.07 300.01Z" filter="url(#b)"/>
+    <path fill="#5da4ff" d="M510.25 610.56 179 402.2V253.65l331.25 208.1Z"/>
+    <path fill="url(#c)" d="M510.25 610.56 841.51 402.2V253.65l-331.26 208.1Z"/>
+    <path fill="url(#d)" d="m841.51 253.65-331.26 208.1L179 253.65 510.25 76Z"/>
+    <g fill="#1960d1">
+        <path d="m390.91 266-15.04-89.87 74.92-.65 29.09-.46 7.36-.29 2.75-.33 6.38 35.3-74.54-.01 7.23 56.32-38.15-.01ZM511.19 328.54l102.08.01-.2-78.92.19-16.35H568.9v55.88l-57.71-.01v39.39Z"/>
+    </g>
+</svg>
