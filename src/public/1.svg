@@ -17,33 +17,21 @@
             <stop offset="1" stop-color="#c2ddff"/>
         </linearGradient>
         <filter height="1.017" id="filter-1" width="1.011" x="-0.005" y="-0.009">
-            <feGaussianBlur color-interpolation-filters="linearRGB" in="SourceGraphic"
-                            stdDeviation="1 1"/>
+            <feGaussianBlur color-interpolation-filters="linearRGB" in="SourceGraphic" stdDeviation="1 1"/>
         </filter>
     </defs>
     <g>
         <path d="M 510.25 899.00 L 179.00 690.64 L 179.00 542.09 L 510.25 750.19 Z" fill="#6fe6b1"/>
-        <path d="M 510.25 899.00 L 841.51 690.64 L 841.51 542.09 L 510.25 750.19 Z" fill="#4dd197"
-
-        />
-        <path d="M 841.51 542.09 L 510.25 750.19 L 179.00 542.09 L 510.25 364.44 Z" fill="url(#linearGradient-1)"
-
-        />
+        <path d="M 510.25 899.00 L 841.51 690.64 L 841.51 542.09 L 510.25 750.19 Z" fill="#4dd197"/>
+        <path d="M 841.51 542.09 L 510.25 750.19 L 179.00 542.09 L 510.25 364.44 Z" fill="url(#linearGradient-1)"/>
     </g>
     <path d="M 274.14 488.34 L 515.12 647.10 L 844.00 466.12 L 559.07 300.01 Z" fill="#5f6fa5"
-          fill-opacity="0.15" fill-rule="evenodd" filter="url(#filter-1)"
-          stroke="none"
+          fill-opacity="0.15" fill-rule="evenodd" filter="url(#filter-1)" stroke="none"
     />
     <g>
-        <path d="M 510.25 610.56 L 179.00 402.20 L 179.00 253.65 L 510.25 461.75 Z" fill="#5da4ff"
-
-        />
-        <path d="M 510.25 610.56 L 841.51 402.20 L 841.51 253.65 L 510.25 461.75 Z" fill="url(#linearGradient-2)"
-
-        />
-        <path d="M 841.51 253.65 L 510.25 461.75 L 179.00 253.65 L 510.25 76.00 Z" fill="url(#linearGradient-3)"
-
-        />
+        <path d="M 510.25 610.56 L 179.00 402.20 L 179.00 253.65 L 510.25 461.75 Z" fill="#5da4ff"/>
+        <path d="M 510.25 610.56 L 841.51 402.20 L 841.51 253.65 L 510.25 461.75 Z" fill="url(#linearGradient-2)"/>
+        <path d="M 841.51 253.65 L 510.25 461.75 L 179.00 253.65 L 510.25 76.00 Z" fill="url(#linearGradient-3)"/>
     </g>
     <g>
         <path d="M 390.91 266.00 L 375.87 176.13 L 450.79 175.48 L 479.88 175.02 L 487.24 174.73 L 489.99 174.40 L 496.37 209.70 L 421.83 209.69 L 429.06 266.01 L 390.91 266.00 Z"
