@@ -1,24 +1,24 @@
 @font-face {
     font-family: 'HarmonyOS Sans SC';
-    src: url('fonts/HarmonyOS_Sans_SC_Regular.woff2') format('woff2');
+    src: url('https://oss.dxmy.fun/blog/font/HarmonyOS_Sans_SC_Regular.woff2') format('woff2');
     font-weight: 400;
 }
 
 @font-face {
     font-family: 'HarmonyOS Sans SC';
-    src: url('fonts/HarmonyOS_Sans_SC_Medium.woff2') format('woff2');
+    src: url('https://oss.dxmy.fun/blog/font/HarmonyOS_Sans_SC_Medium.woff2') format('woff2');
     font-weight: 500;
 }
 
 @font-face {
     font-family: 'HarmonyOS Sans SC';
-    src: url('fonts/HarmonyOS_Sans_SC_Bold.woff2') format('woff2');
+    src: url('https://oss.dxmy.fun/blog/font/HarmonyOS_Sans_SC_Bold.woff2') format('woff2');
     font-weight: 600;
 }
 
 @font-face {
     font-family: 'JetBrains Mono';
-    src: url('fonts/JetBrainsMono_Regular.woff2') format('woff2');
+    src: url('https://oss.dxmy.fun/blog/font/JetBrainsMono_Regular.woff2') format('woff2');
     font-weight: 400;
 }
 
