@@ -4,7 +4,7 @@ import { generateSidebar } from './utils/genSidebar'
 export default defineConfig({
   // 站点配置
   title: '莫记',
-  description: '莫记 - 淡笑莫言的随记小站',
+  description: '淡笑莫言的随记小站',
   head: [ [ 'link', { rel: 'icon', href: '/logo.svg' } ] ],
   lang: 'zh-cn',
   srcDir: 'src',
@@ -57,7 +57,6 @@ export default defineConfig({
       }
     },
 
-    // 本地化
     outline: {
       level: [ 2, 3 ],
       label: '章节速览'

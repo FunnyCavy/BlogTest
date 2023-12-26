@@ -1,9 +1,10 @@
 ---
 layout: home
+titleTemplate: '淡笑莫言的随记小站'
 
 hero:
   name: '莫记 - MOJI'
-  text: '淡笑莫言的速记小站'
+  text: '淡笑莫言的随记小站'
   tagline: '做一个有追求的技术人'
   image:
     src: /logo.svg
