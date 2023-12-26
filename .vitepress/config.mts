@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress'
-import { generateSidebar } from './utils/genSidebar.mjs'
+import { generateSidebar } from './utils/genSidebar'
 
 export default defineConfig({
   // 站点配置
@@ -16,9 +16,9 @@ export default defineConfig({
     // 导航栏
     nav: [
       { text: '主页', link: '/' },
-      { text: '博客', link: '/blog/' },
-      { text: '笔记', link: '/note/' },
-      { text: '杂谈', link: '/other/' }
+      { text: '博客', link: '/blog/', activeMatch: '^/blog/' },
+      { text: '笔记', link: '/note/', activeMatch: '^/note/' },
+      { text: '杂谈', link: '/other/', activeMatch: '^/other/' }
     ],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/DanXiaoMoYan' }

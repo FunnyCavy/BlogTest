@@ -1,1 +1,5 @@
-other
+---
+lastUpdated: false
+---
+
+# 杂谈
