@@ -10,17 +10,17 @@ hero:
     alt: 莫记
   actions:
     - theme: brand
-      text: ⭐ 博客
+      text: 🎨 博客
       link: /blog/
     - theme: alt
-      text: 📖 笔记
+      text: 🗂️ 笔记
       link: /note/
     - theme: sponsor
-      text: 🍊 杂谈
+      text: 🌈 杂谈
       link: /other/
 
 features:
-  - icon: 💧
+  - icon: ✒️
     title: 墨迹
     details: 这里的每一笔墨迹，都承载着知识的深度与乐趣，绘写着学习的精彩纷呈，汇聚成知识的海洋。
   - icon: 🌙
