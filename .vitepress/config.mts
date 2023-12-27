@@ -9,13 +9,6 @@ export default defineConfig({
   lang: 'zh-cn',
   srcDir: 'src',
 
-  markdown: {
-    theme: {
-      light: 'material-theme-darker',
-      dark: 'material-theme-darker'
-    }
-  },
-
   // 主题配置
   themeConfig: {
     logo: '/logo.svg',
@@ -81,6 +74,14 @@ export default defineConfig({
     darkModeSwitchLabel: '外观',
     sidebarMenuLabel: '菜单',
     returnToTopLabel: '返回顶部'
+  },
+
+  // Markdown 配置
+  markdown: {
+    theme: {
+      light: 'material-theme',
+      dark: 'material-theme'
+    }
   },
 
   vite: {
