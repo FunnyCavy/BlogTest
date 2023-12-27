@@ -9,6 +9,13 @@ export default defineConfig({
   lang: 'zh-cn',
   srcDir: 'src',
 
+  markdown: {
+    theme: {
+      light: 'material-theme-darker',
+      dark: 'material-theme-darker'
+    }
+  },
+
   // 主题配置
   themeConfig: {
     logo: '/logo.svg',
