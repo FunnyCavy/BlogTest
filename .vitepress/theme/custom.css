@@ -39,6 +39,24 @@
     --vp-font-family-mono: 'JetBrains Mono', 'HarmonyOS Sans SC';
 }
 
+/******************** 代码块 ********************/
+:root {
+    --vp-code-block-bg: #212121; /* 代码块背景颜色 */
+    --vp-code-block-color: #eeffff; /* 代码块文字颜色 */
+
+    --vp-code-lang-color: #848484; /* 代码块语言颜色 */
+    --vp-code-copy-copied-text-content: '已复制'; /* 代码复制成功文本 */
+
+    --vp-code-line-number-color: #424242; /* 代码行号颜色 */
+    --vp-code-block-divider-color: #303030; /* 代码行号分割颜色 */
+
+    --vp-code-tab-divider: #303030; /* 代码组标签分割颜色 */
+    --vp-code-tab-text-color: #848484; /* 代码组标签文本默认颜色 */
+    --vp-code-tab-hover-text-color: #eeffff; /* 代码组标签文本悬停颜色 */
+    --vp-code-tab-active-text-color: #eeffff; /* 代码组标签文本激活颜色 */
+    --vp-code-tab-active-bar-color: #80cbc4; /* 代码组标签下标激活颜色 */
+}
+
 /******************** 图像 ********************/
 .main img:hover {
     transform: scale(1.01);
@@ -58,22 +76,4 @@
     backdrop-filter: blur(3px);
     cursor: pointer !important;
     z-index: 30;
-}
-
-/******************** 代码块 ********************/
-:root {
-    --vp-code-block-bg: #212121; /* 代码块背景颜色 */
-    --vp-code-block-color: #eeffff; /* 代码块文字颜色 */
-
-    --vp-code-lang-color: #848484; /* 代码块语言颜色 */
-    --vp-code-copy-copied-text-content: '已复制'; /* 代码复制成功文本 */
-
-    --vp-code-line-number-color: #424242; /* 代码行号颜色 */
-    --vp-code-block-divider-color: #303030; /* 代码行号分割颜色 */
-
-    --vp-code-tab-divider: #303030; /* 代码组标签分割颜色 */
-    --vp-code-tab-text-color: #848484; /* 代码组标签文本默认颜色 */
-    --vp-code-tab-hover-text-color: #eeffff; /* 代码组标签文本悬停颜色 */
-    --vp-code-tab-active-text-color: #eeffff; /* 代码组标签文本激活颜色 */
-    --vp-code-tab-active-bar-color: #80cbc4; /* 代码组标签下标激活颜色 */
 }
