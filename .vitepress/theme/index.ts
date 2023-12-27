@@ -16,6 +16,7 @@ export default {
     onMounted(() => initZoom())
     watch(
       () => route.path,
-      () => nextTick(() => initZoom()))
+      () => nextTick(() => initZoom())
+    )
   }
 }
