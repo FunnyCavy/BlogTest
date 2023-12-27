@@ -1,3 +1,15 @@
+/******************** 首页 ********************/
+:root {
+    /* 首页标题样式 */
+    --vp-home-hero-name-color: transparent;
+    --vp-home-hero-name-background: linear-gradient(30deg, #6ea 10%, #5af 90%);
+
+    /* 首页图标样式 */
+    --vp-home-hero-image-filter: blur(60px);
+    --vp-home-hero-image-background-image: linear-gradient(30deg, #6ea 50%, #5af 50%);
+}
+
+/******************** 字体 ********************/
 @font-face {
     font-family: 'HarmonyOS Sans SC';
     src: url('https://oss.dxmy.fun/blog/font/HarmonyOS_Sans_SC_Regular.woff2') format('woff2');
@@ -23,20 +35,11 @@
 }
 
 :root {
-    /* 字体 */
     --vp-font-family-base: 'HarmonyOS Sans SC';
     --vp-font-family-mono: 'JetBrains Mono', 'HarmonyOS Sans SC';
-
-    /* 首页标题样式 */
-    --vp-home-hero-name-color: transparent;
-    --vp-home-hero-name-background: linear-gradient(30deg, #6ea 10%, #5af 90%);
-
-    /* 首页图标样式 */
-    --vp-home-hero-image-filter: blur(60px);
-    --vp-home-hero-image-background-image: linear-gradient(30deg, #6ea 50%, #5af 50%);
 }
 
-/* 图像 */
+/******************** 图像 ********************/
 .main img:hover {
     transform: scale(1.01);
     box-shadow: var(--vp-shadow-3);
@@ -57,44 +60,20 @@
     z-index: 30;
 }
 
+/******************** 代码块 ********************/
 :root {
-    --vp-code-block-color: red; /* 代码块文字颜色 */
-    --vp-code-block-bg: #212121; /* 代码块背景 */
+    --vp-code-block-bg: #212121; /* 代码块背景颜色 */
+    --vp-code-block-color: #eeffff; /* 代码块文字颜色 */
 
-    --vp-code-line-highlight-color: green; /* 代码行高亮 */
-    --vp-code-line-number-color: blue; /* 代码行颜色 */
+    --vp-code-lang-color: #848484; /* 代码块语言颜色 */
+    --vp-code-copy-copied-text-content: '已复制'; /* 代码复制成功文本 */
 
-    --vp-code-color: var(--vp-c-brand-1);
-    --vp-code-link-color: var(--vp-c-brand-1);
-    --vp-code-link-hover-color: var(--vp-c-brand-2);
-    --vp-code-bg: var(--vp-c-default-soft);
+    --vp-code-line-number-color: #424242; /* 代码行号颜色 */
+    --vp-code-block-divider-color: #303030; /* 代码行号分割颜色 */
 
-    --vp-code-block-divider-color: var(--vp-c-gutter);
-
-    --vp-code-lang-color: var(--vp-c-text-3);
-
-    --vp-code-line-diff-add-color: var(--vp-c-green-soft);
-    --vp-code-line-diff-add-symbol-color: var(--vp-c-green-1);
-
-    --vp-code-line-diff-remove-color: var(--vp-c-red-soft);
-    --vp-code-line-diff-remove-symbol-color: var(--vp-c-red-1);
-
-    --vp-code-line-warning-color: var(--vp-c-yellow-soft);
-    --vp-code-line-error-color: var(--vp-c-red-soft);
-
-    /* 复制 */
-    --vp-code-copy-code-border-color: var(--vp-c-divider);
-    --vp-code-copy-code-bg: var(--vp-c-bg-soft);
-    --vp-code-copy-code-hover-border-color: var(--vp-c-divider);
-    --vp-code-copy-code-hover-bg: var(--vp-c-bg);
-    --vp-code-copy-code-active-text: var(--vp-c-text-2);
-    --vp-code-copy-copied-text-content: '已复制';
-
-    /*Tab*/
-    --vp-code-tab-divider: var(--vp-code-block-divider-color);
-    --vp-code-tab-text-color: var(--vp-c-text-2);
-    --vp-code-tab-bg: var(--vp-code-block-bg);
-    --vp-code-tab-hover-text-color: var(--vp-c-text-1);
-    --vp-code-tab-active-text-color: var(--vp-c-text-1);
-    --vp-code-tab-active-bar-color: var(--vp-c-brand-1);
+    --vp-code-tab-divider: #303030; /* 代码组标签分割颜色 */
+    --vp-code-tab-text-color: #848484; /* 代码组标签文本默认颜色 */
+    --vp-code-tab-hover-text-color: #eeffff; /* 代码组标签文本悬停颜色 */
+    --vp-code-tab-active-text-color: #eeffff; /* 代码组标签文本激活颜色 */
+    --vp-code-tab-active-bar-color: #80cbc4; /* 代码组标签下标激活颜色 */
 }
