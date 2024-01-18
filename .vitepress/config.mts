@@ -8,6 +8,7 @@ export default defineConfig({
   head: [ [ 'link', { rel: 'icon', href: '/logo.svg' } ] ],
   lang: 'zh-cn',
   srcDir: 'src',
+  base: '/BlogTest/',
 
   // 主题配置
   themeConfig: {
