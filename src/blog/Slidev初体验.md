@@ -18,10 +18,10 @@ pnpm create slidev
 
 Slidev 一共提供了三种模式，访问链接如下：
 
-- 入口：http://localhost:3030/entry
-- 演示模式：http://localhost:3030
-- 演讲者模式：http://localhost:3030/presenter
-- 备注模式：http://localhost:3030/notes
+- 入口：`http://localhost:3030/entry`
+- 演示模式：`http://localhost:3030`
+- 演讲者模式：`http://localhost:3030/presenter`
+- 备注模式：`http://localhost:3030/notes`
 
 ### 演示模式
 
