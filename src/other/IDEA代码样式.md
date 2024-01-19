@@ -1,29 +1,29 @@
 #### Java > 换行和大括号
 
-重新格式化时保持\
+**重新格式化时保持**\
 <span style="margin-left: 2em;"> </span>✅换行符
 
-extends/implements/permits 关键字 过长则换行\
-throws 关键字 过长则换行
+**extends/implements/permits 关键字** 过长则换行\
+**throws 关键字** 过长则换行
 
-方法声明形参 过长则换行\
+**方法声明形参** 过长则换行\
 <span style="margin-left: 2em;"> </span>🔲多行时对齐\
-方法调用形参 过长则换行\
+**方法调用形参** 过长则换行\
 <span style="margin-left: 2em;"> </span>🔲多行时对齐\
-链式方法调用 如果过长则截断\
+**链式方法调用** 如果过长则截断\
 <span style="margin-left: 2em;"> </span>✅多行时对齐
 
-枚举常量 始终换行
+**枚举常量** 始终换行
 
 #### Java > 空行
 
-最大的空白行：\
+**最大的空白行：**\
 在声明中：1\
 在代码中：1\
 在 '}' 前：0\
 在标头与软件包之间：0
 
-最小的空白行：\
+**最小的空白行：**\
 在类头后：1\
 类结尾前：1
 
