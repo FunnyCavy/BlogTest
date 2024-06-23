@@ -1,7 +1,0 @@
-- Translation
-- Smart Input
-- Easy Javadoc
-- Show Comment
-- Maven Helper
-- Rainbow Brackets
-- String Manipulation
